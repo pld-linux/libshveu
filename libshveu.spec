@@ -21,7 +21,7 @@ Requires:	libuiomux >= 1.5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-libshveu is a ibrary for controlling SH-Mobile VEU (Video Engine
+libshveu is a library for controlling SH-Mobile VEU (Video Engine
 Unit). VEU handles colorspace conversion, rotation and scaling.
 
 %description -l pl.UTF-8
