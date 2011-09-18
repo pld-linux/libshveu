@@ -1,23 +1,23 @@
 Summary:	Library for controlling SH-Mobile VEU (Video Engine Unit)
 Summary(pl.UTF-8):	Biblioteka do sterowania układem SH-Mobile VEU (Video Engine Unit)
 Name:		libshveu
-Version:	1.5.2
+Version:	1.7.1
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-# trailing /%{name}-%{version}.tar.gz is a hack for df
-Source0:	https://oss.renesas.com/modules/document/gate.php/?way=attach&refer=libshveu&openfile=%{name}-%{version}.tar.gz/%{name}-%{version}.tar.gz
-# Source0-md5:	2196c0ca54ed0a90ba489e774329b0ac
+# trailing #/%{name}-%{version}.tar.gz is a hack for df
+Source0:	https://oss.renesas.com/modules/document/gate.php/?way=attach&refer=libshveu&openfile=%{name}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+# Source0-md5:	22e250409da2b65d91944a385b1aee02
 Patch0:		%{name}-link.patch
 URL:		https://oss.renesas.com/modules/document/?libshveu
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	libtool
-BuildRequires:	libuiomux-devel >= 1.5.0
+BuildRequires:	libuiomux-devel >= 1.6.0
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
-Requires:	libuiomux >= 1.5.0
+Requires:	libuiomux >= 1.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,7 +34,7 @@ Summary:	Header files for libshveu library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libshveu
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libuiomux-devel >= 1.5.0
+Requires:	libuiomux-devel >= 1.6.0
 
 %description devel
 Header files for libshveu library.
@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/shveu-convert
 %attr(755,root,root) %{_bindir}/shveu-display
 %attr(755,root,root) %{_libdir}/libshveu.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libshveu.so.3
+%attr(755,root,root) %ghost %{_libdir}/libshveu.so.5
 %{_mandir}/man1/shveu-convert.1*
 
 %files devel

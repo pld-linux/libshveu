@@ -1,14 +1,3 @@
---- libshbeu-1.0.2/src/libshveu/Makefile.am.orig	2010-07-26 10:16:11.000000000 +0200
-+++ libshbeu-1.0.2/src/libshveu/Makefile.am	2011-04-22 17:37:55.505396593 +0200
-@@ -16,6 +16,6 @@ noinst_HEADERS = shbeu_regs.h
- libshbeu_la_SOURCES = \
- 	beu.c
- 
--libshveu_la_CFLAGS = -v -Wall -O2 -I $(srcdir) -fPIC -fno-common
-+libshveu_la_CFLAGS = -Wall -I $(srcdir) -fno-common
- libshveu_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@ @SHLIB_VERSION_ARG@
--libshveu_la_LIBADD =
-+libshveu_la_LIBADD = $(UIOMUX_LIBS)
 --- libshbeu-1.0.2/shveu.pc.in.orig	2010-07-22 10:04:47.000000000 +0200
 +++ libshbeu-1.0.2/shveu.pc.in	2011-04-22 17:38:18.958731106 +0200
 @@ -8,5 +8,5 @@ Description: A library for controlling S
