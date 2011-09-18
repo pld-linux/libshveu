@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL v2+
 Group:		Libraries
 # trailing #/%{name}-%{version}.tar.gz is a hack for df
+#Source0Download: https://oss.renesas.com/modules/document/?libshveu
 Source0:	https://oss.renesas.com/modules/document/gate.php/?way=attach&refer=libshveu&openfile=%{name}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 # Source0-md5:	22e250409da2b65d91944a385b1aee02
 Patch0:		%{name}-link.patch
